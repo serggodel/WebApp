@@ -1,0 +1,28 @@
+﻿@page "{id}"
+@model WebApp.Pages.Peoples.EditModel
+@{
+	ViewData["Title"] = "Edit People";
+}
+
+<form method="post">
+	<div asp-validation-summary="All"></div>
+	<input asp-for="People.Id" type="hidden" />
+	<div>
+		<label asp-for="People.FirstName"></label>
+		<div>
+			<input asp-for="People.FirstName" />
+			<span asp-validation-for="People.FirstName"></span>
+		</div>
+	</div>
+	<div>
+		<label asp-for="People.LastName"></label>
+		<div>
+			<input asp-for="People.LastName" />
+			<span asp-validation-for="People.LastName"></span>
+		</div>
+	</div>
+	<div>
+		<button type="submit">Save</button>
+	</div>
+</form>
+
